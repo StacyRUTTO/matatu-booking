@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Your ticket</title>
+    <style type="text/css">
+        .title {
+            font-weight: bold;
+            font-size: 20pt;
+            text-decoration: none;
+            padding: 10px;
+            text-align: center;
+            background-color: bisque;
+        }
+        #id{
+            text-align: left;
+            font-size: 12px;
+            margin-top: 0px;
+        }
+        table {
+            text-align: center;
+        }
+
+        td {
+            padding: 3px;
+            font-size: 10pt;
+            text-align: left;
+            text-decoration: underline;
+        }
+
+        .hightlight {
+            font-size: 15pt;
+            background-color: burlywood;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3" class="title">
+                North Rift Travel Ticket
+                <p id="id">Ticket ID: {{ticket_info.ticket_id}}</p>
+            </td>
+            
+        </tr>
+        <tr>
+            <td colspan="3">Name:
+                <p class="hightlight">{{ticket_info.name}}</p>
+
+            </td>
+        </tr>
+        <tr>
+
+            <td colspan="3">Phone No:
+                <p class="hightlight">{{ticket_info.phone_no}}</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td>To:
+                <p class="hightlight">{{ticket_info.to}}</p>
+
+            </td>
+            <td>From:
+                <p class="hightlight">{{ticket_info.origin}}</p>
+
+            </td>
+            <td>Seat No:
+                <p class="hightlight">{{ticket_info.seat_no}}</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Date of Travel:
+                <p class="hightlight">{{ticket_info.date_of_departure}}</p>
+
+            </td>
+            <td>Time of departure:
+                <p class="hightlight">{{ticket_info.time_of_departure}}</p>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">Price:
+
+                <p class="hightlight">{{ticket_info.price}}</p>
+
+            </td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
+
+
+<!-- {{ticket_info.date_of_departure}}
+{{ticket_info.name}}
+{{ticket_info.phone_no}}
+{{ticket_info.to}}
+{{ticket_info.origin}}
+{{ticket_info.time_of_departure}}
+{{ticket_info.seat_no}}
+{{ticket_info.price}} -->

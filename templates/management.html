@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+<div class="container">
+  <h4 class="text-center head">North Rift management dashboard</h4>
+  <p class="text-center lead">Travel statistics</p>
+  <hr>
+  <div class="row">
+
+    <div class="col-sm-5" id="filter_tags">
+      <p class="filter">Pick a date</p>
+      <div id="datepicker-admin"></div>
+      <p class="filter">Pick a route</p>
+      <form method='POST' class="form-control-sm" id="admin">
+        {% csrf_token %}
+        {{form|crispy}}
+
+      </form>
+    </div>
+    <div class="col-sm-7">
+      <canvas id="myChart"></canvas>
+      <div>
+        <p style="background-color: #007bff;color: white;padding: 15px">Route report</p>
+        
+        <p style="padding: 1px;font-weight: bold" class="lead">Total Number of Travellers <span id="number"></span></p>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Traveller Name</th>
+              <th>Phone Number</th>
+              <th>Time of depature</th>
+              <th>Seat No.</th>
+            </tr>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+        <a  id="download_btn" class="btn btn-primary btn-sm" href="">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+{% endblock %}

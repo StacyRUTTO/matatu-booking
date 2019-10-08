@@ -1,0 +1,132 @@
+
+.layout{
+    width: 90%;
+    text-align:center;
+    border-radius:10px;
+    
+}
+#driver {
+    background-color: #fff;
+    font-size: 15px;
+    padding: 10px;
+    }
+.seat {
+    padding: 30px;
+    cursor: pointer;
+    font-size: large;
+    width: 76px;
+    font-weight: bolder;
+    border: 1px solid #ced4da; 
+    background-color: #fff;
+}
+.desc {
+    text-align: center;
+    border: 1px solid #ced4da; 
+    background-color: #fff;
+}
+.intro {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.choose {
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+    margin-top: 10px;
+}
+body {
+    background-color:rgba(204, 204, 204, 0.356);
+}
+#title {
+    text-align: center;
+}
+
+
+
+.selected{
+    background-color:#007bff;
+    color:white;
+}
+.taken{
+    background-color:#dc3545;
+    color:white;
+}
+
+#key{
+    margin-top: 20px;
+}
+#key p {
+    display: inline-block;
+    margin: 10px;
+}
+#key span{
+  padding-left: 30px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+#key .available{
+    background-color: #fff;
+}
+#key .taken{
+    background-color: #dc3545;
+    
+}
+#key .selected{
+    background-color: #007bff;
+}
+
+.navbar  {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+.ticket{
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    height:auto;
+    width:50%;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding:50px;
+}
+#download{
+    position:absolute;
+    top:78%;
+    left:65%;
+}
+#ticket_logo{
+    text-align:center;
+    font-weight:bold;
+    font-size:large;
+
+}
+.span{
+    border-bottom: 1px solid black;
+}
+.ticket_text{
+    background-color:white;
+    padding:5px;
+}
+.login-box{
+    padding: 10px;
+    background-color: #dc3545;
+}
+.head{
+    margin-top: 40px;
+}
+#admin .form-group{
+    width: 60%;
+}
+#datepicker-admin {
+    margin-bottom: 20px;
+}
+.filter{
+    margin-bottom: 2px;
+}
+
+
+

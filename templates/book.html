@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <p class="intro">Fill in your trip details</p>
+      <form action='{% url "book" %}' method='POST' id="bookingform" class="form-control-sm">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="checkbox" class="form-group" id="pay"> Pay via Mpesa 
+        <input type="submit" class="btn btn-primary btn-lg btn-block" value="Book Now" />
+      </form>
+    </div>
+    <div class="col-sm-7">
+
+      <table class="layout">
+        <tbody>
+          <p class="choose">Choose a seat(s)</p>
+          <tr>
+            <td class="seat">1</td>
+            <td class="seat">2</td>
+            <td id="driver"><b>DRIVER</b></td>
+
+          </tr>
+          <tr>
+            <th class="desc" colspan="3">Behind the driver</th>
+          </tr>
+          <tr>
+            <td class="seat">3</td>
+            <td class="seat">4</td>
+            <td class="seat">5</td>
+          </tr>
+          <tr>
+            <th class="desc" colspan="3">Middle seat</th>
+          </tr>
+          <tr>
+            <td class="seat">6</td>
+            <td class="seat">7</td>
+            <td class="seat">8</td>
+          </tr>
+          <tr>
+            <th class="desc" colspan="3">Back seat</th>
+          </tr>
+          <tr>
+            <td class="seat">9</td>
+            <td class="seat">10</td>
+            <td class="seat">11</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <div id="key">
+        <p>
+          <span class="available"></span>
+          Available</p>
+        <p>
+          <span class="taken"></span>
+          Taken</p>
+        <p>
+          <span class="selected"></span>
+          Selected</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

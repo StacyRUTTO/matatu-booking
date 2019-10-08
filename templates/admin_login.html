@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags%}
+{% block content %}
+
+<div class = "container">
+    <div class="row">
+      <div class="col-md-4 offset-md-4" >
+          <div>
+          <form action = '{% url "admin-login" %}' method="POST" class="form-control-sm">
+            {% csrf_token %}
+            {{form|crispy}}
+            <input type="submit" class="btn btn-primary btn-lg btn-block" value="LOGIN" />
+          </form>
+        </div>
+      </div>
+    </div>
+</div>
+{% endblock %}
